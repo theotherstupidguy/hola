@@ -6,11 +6,11 @@ class Hola::Translator
   def hi
     case @language
     when "spanish"
-      "hola mundo"
+     puts "hola mundo"
     when "korean"
-      "anyoung ha se yo"
+     puts "anyoung ha se yo"
     when "arabic"
-      "bahari agda3 nas"
+     puts "bahari agda3 nas"
     else
       "hello world"
     end
