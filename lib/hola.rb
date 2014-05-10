@@ -1,3 +1,5 @@
+require 'hola/translator'
+
 class Hola
   def self.hi(language)
     translator = Translator.new(language)
@@ -5,4 +7,3 @@ class Hola
   end
 end
 
-require 'hola/translator'
