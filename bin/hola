@@ -7,7 +7,7 @@ puts Hola.hi(ARGV[0])
 class MyHola < Thor
   include Thor::Actions    
   desc "hello NAME", "say hello to NAME"
-  def big(name)
+  def hello(name)
     puts "Big Hello #{name}"
   end
 
