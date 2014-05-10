@@ -1,19 +1,20 @@
 #!/usr/bin/env ruby
-require 'thor'
-require 'hola'
 
-puts Hola.hi(ARGV[0])
+require 'thor'
+require_relative '../lib/hola'
+
+#puts Hola.hi(ARGV[0])
 
 class MyHola < Thor
   include Thor::Actions    
-  desc "hello NAME", "say hello to NAME"
-  def hello(name)
-    puts "Big Hello #{name}"
+  desc "ninja NAME", "say hello to ninja"
+  def ninja(name)
+    puts "Big Hello ninja #{name}"
   end
 
-  desc "start", "Starts the server in style!"
-  def start(*args)
-    command = "bundle exec thin -R config.ru start #{port_option} #{args}"
+  desc "echo_for_me", "echo_for_me!"
+  def echo_for_me
+    command = "bundle exec echo 'mushi'"
     system(command)
   end
 
